@@ -1,5 +1,7 @@
 // import { ITile } from "../Levels";
 
+import { ITile } from "../Levels";
+
 // import { ITile } from "../Levels";
 
 class DataManageer {
