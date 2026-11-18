@@ -9,7 +9,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 120,
   "editor.cursorStyle": "block",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.renderWhitespace": "boundary",
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": false,
@@ -18,7 +18,7 @@
   "editor.suggestSelection": "first",
   "editor.inlineSuggest.enabled": true,
   "editor.parameterHints.enabled": true,
-  "editor.hover.enabled": true,
+  "editor.hover.enabled": "on",
   "editor.quickSuggestions": {
     "strings": true,
     "comments": "off",
