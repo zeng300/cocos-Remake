@@ -1,0 +1,185 @@
+{
+  // ==================== 基础编辑器 ====================
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Consolas', 'Microsoft YaHei', monospace",
+  "editor.lineHeight": 1.6,
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 120,
+  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderLineHighlight": "all",
+  "editor.scrollBeyondLastLine": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  "editor.parameterHints.enabled": true,
+  "editor.hover.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": true,
+    "comments": "off",
+    "other": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": false,
+  "files.insertFinalNewline": true,
+
+  // ==================== 默认格式化器（按语言） ====================
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.vscode-vue",
+    "editor.formatOnSave": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ==================== 保存时执行的代码操作 ====================
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.formatDocument": "explicit",
+    "source.organizeImports": "explicit",
+    "source.addMissingImports": "explicit"
+  },
+
+  // ==================== TypeScript / JavaScript（Cocos 3.8） ====================
+  "js/ts.suggest.autoImports": true,
+  "js/ts.preferences.importModuleSpecifier": "relative",
+  "js/ts.preferences.autoImportFileExcludePatterns": [
+    "**/node_modules/**",
+    "**/build/**",
+    "**/library/**",
+    "**/temp/**",
+    "**/.git/**",
+    "**/dist/**"
+  ],
+  "js/ts.preferences.includePackageJsonAutoImports": "on",
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "js/ts.inlayHints.parameterNames.enabled": "literals",
+  "js/ts.inlayHints.parameterTypes.enabled": true,
+  "js/ts.inlayHints.variableTypes.enabled": true,
+  "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
+  "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
+  "js/ts.inlayHints.enumMemberValues.enabled": true,
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "**/node_modules/**",
+    "**/build/**",
+    "**/library/**",
+    "**/temp/**"
+  ],
+
+  // ==================== ESLint ====================
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.options": { "extensions": [".js", ".jsx", ".ts", ".tsx"] },
+  "eslint.format.enable": true,
+  "eslint.codeAction.showDocumentation": { "enable": true },
+  "eslint.useFlatConfig": false,
+
+  // ==================== 文件关联 ====================
+  "files.associations": {
+    "*.vue": "vue",
+    "*.jsx": "javascriptreact",
+    "*.tsx": "typescriptreact"
+  },
+
+  // ==================== 搜索与文件排除 ====================
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/build": true,
+    "**/library": true,
+    "**/temp": true,
+    "**/.git": true,
+    "**/dist": true
+  },
+  "files.exclude": {
+    ".git": true,
+    ".DS_Store": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/build": true,
+    "**/library": true,
+    "**/temp": true,
+    "**/dist": true
+  },
+
+  // ==================== 终端 ====================
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "'Consolas', 'Microsoft YaHei', monospace",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+
+  // ==================== 工作台 ====================
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "breadcrumbs.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, pnpm-lock.yaml, yarn.lock"
+  },
+
+  // ==================== Git ====================
+  "git.decorations.enabled": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.suggestSmartCommit": true,
+  "git.suggestCommitMessageGeneration": true,
+
+  // ==================== 插件推荐 ====================
+  "extensions.ignoreRecommendations": false
+}
