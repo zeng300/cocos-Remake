@@ -1,7 +1,17 @@
 {
-  "name": "demo3_8",
-  "uuid": "682356f3-541c-4086-86df-a50d7a49aae5",
-  "creator": {
-    "version": "3.8.8"
-  }
+	"name": "demo3_8",
+	"uuid": "682356f3-541c-4086-86df-a50d7a49aae5",
+	"creator": {
+		"version": "3.8.8",
+		"registry": {
+			"remote": {}
+		},
+		"dependencies": {
+			"localization-editor": "1.0.4"
+		}
+	},
+	"pink": {
+		"uuid": "f2ae3e13-4f84-4eaa-b0e5-d721c21e49f2",
+		"version": "1.127.0"
+	}
 }

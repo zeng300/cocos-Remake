@@ -1,5 +1,5 @@
-import { TILE_TYPE_ENUM } from "../Enums";
-import level1 from "./level1";
+import { TILE_TYPE_ENUM } from "db://assets/Enums";
+import level1 from "db://assets/Levels/level1";
 
 export interface ITile {
   src: number | null;

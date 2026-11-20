@@ -1,11 +1,12 @@
-// import { ITile } from "../Levels";
+import Singleton from 'db://assets/Base/Singleton'
+import { ITile } from 'db://assets/Levels'
 
-import { ITile } from "../Levels";
+export default class DataManageer extends Singleton {
+  static get Instance() {
+    return super.GetInstance<DataManageer>()
+  }
 
-// import { ITile } from "../Levels";
-
-class DataManageer {
-  mapInfo: Array<Array<ITile>>;
+  mapInfo: Array<Array<ITile>>
+  mapRowCount: number
+  mapColumCount: number
 }
-
-export const DataManagerInstance = new DataManageer();

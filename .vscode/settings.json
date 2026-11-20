@@ -31,11 +31,17 @@
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "editor.rulers": [80, 120],
+
   "files.encoding": "utf8",
   "files.autoGuessEncoding": false,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
 
   // ==================== 默认格式化器（按语言） ====================
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -54,11 +60,20 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -76,7 +91,6 @@
     "editor.defaultFormatter": "Vue.vscode-vue",
     "editor.formatOnSave": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   // ==================== 保存时执行的代码操作 ====================
   "editor.codeActionsOnSave": {
@@ -88,7 +102,7 @@
 
   // ==================== TypeScript / JavaScript（Cocos 3.8） ====================
   "js/ts.suggest.autoImports": true,
-  "js/ts.preferences.importModuleSpecifier": "relative",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
   "js/ts.preferences.autoImportFileExcludePatterns": [
     "**/node_modules/**",
     "**/build/**",
@@ -105,6 +119,7 @@
   "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
   "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
   "js/ts.inlayHints.enumMemberValues.enabled": true,
+
   "typescript.suggest.autoImports": true,
   "javascript.suggest.autoImports": true,
   "typescript.preferences.importModuleSpecifier": "relative",
@@ -116,6 +131,11 @@
     "**/temp/**"
   ],
 
+  // 来自第一份：禁用内置 JS/TS 格式化，交给 Prettier
+  "js/ts.format.enable": false,
+  "js.validate.enable": false,
+  "ts.validate.enable": true,
+
   // ==================== ESLint ====================
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.options": { "extensions": [".js", ".jsx", ".ts", ".tsx"] },
@@ -123,25 +143,53 @@
   "eslint.codeAction.showDocumentation": { "enable": true },
   "eslint.useFlatConfig": false,
 
+  // ==================== Stylelint / CSS 校验 ====================
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "cssModules.camelCase": true,
+
+  // ==================== JSON 内置格式化开关 ====================
+  "json.format.enable": true,
+
   // ==================== 文件关联 ====================
   "files.associations": {
+    ".code-workspace": "jsonc",
+    ".babelrc": "json",
+    ".eslintrc": "jsonc",
+    ".eslintrc*.json": "jsonc",
+    ".stylelintrc": "jsonc",
+    "stylelintrc": "jsonc",
+    ".htmlhintrc": "jsonc",
+    "htmlhintrc": "jsonc",
+    "Procfile*": "shellscript",
+    "README": "markdown",
     "*.vue": "vue",
     "*.jsx": "javascriptreact",
     "*.tsx": "typescriptreact"
   },
 
   // ==================== 搜索与文件排除 ====================
+  "search.useIgnoreFiles": true,
   "search.exclude": {
+    "**/build": true,
+    "**/output": true,
+    "**/dist": true,
+    "**/yarn.lock": true,
+    "**/package-lock.json": true,
+    "**/*.log": true,
+    "**/*.pid": true,
+    "**/.git": true,
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true,
-    "**/build": true,
     "**/library": true,
-    "**/temp": true,
-    "**/.git": true,
-    "**/dist": true
+    "**/temp": true
   },
   "files.exclude": {
+    "**/*/adapters/index.ts": true,
+    "**/*/adapters/index.js": true,
     ".git": true,
     ".DS_Store": true,
     "**/.git": true,
@@ -152,6 +200,10 @@
     "**/temp": true,
     "**/dist": true
   },
+
+  // ==================== Emmet / SVG ====================
+  "emmet.triggerExpansionOnTab": true,
+  "svg.preview.background": "black",
 
   // ==================== 终端 ====================
   "terminal.integrated.fontSize": 14,
@@ -178,7 +230,6 @@
   "git.confirmSync": false,
   "git.autofetch": true,
   "git.suggestSmartCommit": true,
-  "git.suggestCommitMessageGeneration": true,
 
   // ==================== 插件推荐 ====================
   "extensions.ignoreRecommendations": false
