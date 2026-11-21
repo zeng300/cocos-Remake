@@ -49,6 +49,6 @@ export class BattleManager extends Component {
     const disX = (TILE_WIDTH * mapRowCount) / 2
     const disY = (TILE_HEIGHT * mapColumCount) / 2 + 80
 
-    this.stage.setPosition(-disX, disY, 0)
+    this.stage.setPosition(-disX, disY)
   }
 }

@@ -4,7 +4,6 @@ const { ccclass, property } = _decorator
 
 export const TILE_WIDTH = 55
 export const TILE_HEIGHT = 55
-
 @ccclass('TileManager')
 export class TileManager extends Component {
   init(spriteFrame: SpriteFrame, i: number, j: number) {
